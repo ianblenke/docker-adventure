@@ -1,0 +1,17 @@
+advsrc.zip
+AAMAIN.FOR
+ADVDAT
+ADVENT.DOC
+ASETUP.FOR
+ASUBS.FOR
+IORS.FOR
+MAKEFILE
+README
+*.F
+*.FOR
+*.o
+*.c
+adventure
+asetup
+ADVDAT.orig
+ADVTXT
