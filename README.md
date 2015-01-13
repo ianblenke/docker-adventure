@@ -4,9 +4,16 @@
 
 This docker image is built from the Adventure 6 version, using f2c and the fortran source.
 
+When run interactively, you will see:
+
+    <Generic Adventure 551 -- Version:6.6, August 1990>
+    Welcome to ADVENTURE!!  Would you like instructions?
+     
+    >
+
 From the original README upon which this docker image is built:
 
-    `Generic Adventure 551' is a cleaned up and enhanced version of the
+    'Generic Adventure 551' is a cleaned up and enhanced version of the
     old classic text game `Adventure'. It is based on a version close to the
     seriously non-portable (and buggy) version for Primes posted last spring. I
     have done a fair job of cleaning it up, portabilizing it, and debugging, but
