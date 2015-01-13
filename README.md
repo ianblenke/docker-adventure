@@ -34,9 +34,13 @@ From the original README upon which this docker image is built:
     
     Doug McDonald
 
-Builder this docker image like so:
+Build this docker image locally if you wish:
 
-	docker build -t ianblenke/adventure .
+	docker build -t $USER/adventure .
+
+Or pull from the autobuild image, or simply reference it in a docker run:
+
+	docker pull ianblenke/adventure
 
 Run this docker container without any arguments to spawn a wetty tty web interface in the background:
 
