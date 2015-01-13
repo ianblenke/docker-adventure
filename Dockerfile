@@ -26,4 +26,4 @@ VOLUME /adventure
 
 EXPOSE 3000
 
-ENTRYPOINT /run.sh
+CMD /run.sh
