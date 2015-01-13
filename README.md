@@ -4,6 +4,8 @@
 
 This docker image is built from the Adventure 6 version, using f2c and the fortran source.
 
+The docker hub page is [ianblenke/adventure](https://registry.hub.docker.com/u/ianblenke/adventure/), and the github source repository is [ianblenke/docker-adventure](https://github.com/ianblenke/docker-adventure).
+
 When run interactively, you will see:
 
     <Generic Adventure 551 -- Version:6.6, August 1990>
@@ -40,9 +42,9 @@ Run this docker container without any arguments to spawn a wetty tty web interfa
 
 	docker run -d --name adventure -p 3000:3000 ianblenke/adventure
 
-Run the /adventure/adventure binary to run adventure interactively in your current terminal:
+Now open a web browser to `http://{your docker host}:3000/`
+
+Alternatively, run the /adventure/adventure binary to run adventure interactively in your current terminal:
 
 	docker run -ti --rm -p 3000:3000 ianblenke/adventure /adventure/adventure
-
-Now open a web browser to `http://{your docker host}:3000/`
 
