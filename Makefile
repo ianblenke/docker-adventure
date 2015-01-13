@@ -1,17 +1,20 @@
 CFLAGS:=-lf2c -lgfortran -lm -lc
 
 all:
-	@echo Usage: make {build|run|compile}
+	@echo "Usage: make {build|run|compile}"
 	@echo      build - build the docker image
 	@echo	run - runs the docker command to build the image
 	@echo ""
-	@echo    compile - compiles the source (used by the build target)
+	@echo    compile - compiles the source "(used by the build target)"
 	@echo       pull - downloads the source
 	@echo    extract - unzips the source
 	@echo      clean - cleans the local directory
 
 build:
 	docker build -t ianblenke/adventure .
+
+web:
+	docker run -ti --rm --name adventure -p 3001:3000 ianblenke/adventure web
 
 run:
 	docker run -ti --rm --name adventure -p 3001:3000 ianblenke/adventure

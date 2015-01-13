@@ -1,13 +1,9 @@
 #!/bin/bash
 
 # Fail fast, including pipelines
-set -eo pipefail
+set -exo pipefail
 
 cd /adventure
-
-if [ -n "$@" ] ; then
-  exec /adventure/adventure $@
-fi
 
 cat > /etc/supervisor/conf.d/supervisord.conf <<EOF
 [supervisord]

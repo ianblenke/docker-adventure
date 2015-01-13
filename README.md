@@ -29,13 +29,13 @@ Builder this docker image like so:
 
 	docker build -t ianblenke/adventure .
 
-Passing any command to this image will run the docker container interactively:
-
-	docker run -ti --rm -p 3000:3000 ianblenke/adventure adventure
-
-Alternatively, run this docker container with a wetty tty web interface in the background:
+Run this docker container without any arguments to spawn a wetty tty web interface in the background:
 
 	docker run -d --name adventure -p 3000:3000 ianblenke/adventure
+
+Run the /adventure/adventure binary to run adventure interactively in your current terminal:
+
+	docker run -ti --rm -p 3000:3000 ianblenke/adventure /adventure/adventure
 
 Now open a web browser to `http://{your docker host}:3000/`
 
