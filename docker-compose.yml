@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  adventure:
+    container_name: adventure
+    hostname: adventure
+    build: .
+    image: ianblenke/adventure
+    ports:
+      - 3000:3000 

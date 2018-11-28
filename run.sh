@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Fail fast, including pipelines
-set -exo pipefail
+set -eo pipefail
 
 cd /adventure
 
@@ -64,6 +64,8 @@ stopwaitsecs=1
 EOF
 
 chown daemon:daemon /etc/supervisor/conf.d/ /var/run/ /var/log/supervisor/ /adventure
+
+echo "NOTE: Open your browser to http://localhost:${PORT}"
 
 # start supervisord
 exec /usr/bin/supervisord -c /etc/supervisor/supervisord.conf

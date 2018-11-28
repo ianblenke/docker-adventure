@@ -36,19 +36,19 @@ From the original README upon which this docker image is built:
 
 Build this docker image locally if you wish:
 
-	docker build -t $USER/adventure .
+    docker-compose build
 
 Or pull from the autobuild image, or simply reference it in a docker run:
 
-	docker pull ianblenke/adventure
+    docker pull ianblenke/adventure
 
 Run this docker container without any arguments to spawn a wetty tty web interface in the background:
 
-	docker run -d --name adventure -p 3000:3000 ianblenke/adventure
+    docker-compose up -d
 
-Now open a web browser to `http://{your docker host}:3000/`
+Now open a web browser to `http://localhost:3000/`
 
 Alternatively, run the /adventure/adventure binary to run adventure interactively in your current terminal:
 
-	docker run -ti --rm -p 3000:3000 ianblenke/adventure /adventure/adventure
+    docker run -ti --rm -p 3000:3000 ianblenke/adventure /adventure/adventure
 
